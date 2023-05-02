@@ -56,7 +56,7 @@ class _MovieCarouselState extends State<MovieCarousel> {
   Widget buildMovieSlider(int index) => AnimatedBuilder(
         animation: _pageController,
         builder: (context, child) {
-          double? value = 0;
+          double value = 0;
           if (_pageController.position.haveDimensions) {
             value = index - (_pageController.page ?? 0);
             value = (value * 0.038).clamp(-1, 1);
