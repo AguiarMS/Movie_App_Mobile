@@ -16,11 +16,29 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         BackdropAndRating(size: size, movie: movie),
         const SizedBox(height: kDefaultPadding / 2),
         TitleDurationAndFabBtn(movie: movie),
-        Genres(movie: movie)
+        Genres(movie: movie),
+        Padding(
+          padding: const EdgeInsets.symmetric(
+              horizontal: kDefaultPadding, vertical: kDefaultPadding / 2),
+          child: Text(
+            'Plot Summary',
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          child: Text(
+            movie.Plot,
+            style: const TextStyle(
+              color: Color(0xFF737599),
+            ),
+          ),
+        ),
       ],
     );
   }
