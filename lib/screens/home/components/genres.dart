@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:move_app/models/movie.dart';
 
 import '../../../constantes.dart';
 import '../../../components/genre_card.dart';

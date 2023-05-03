@@ -65,7 +65,7 @@ List<Movie> movies = [
     rating: 8.5,
     criticsReview: 50,
     metascoreRating: 76,
-    genra: ["Action", "Drama"],
+    genra: ["Action", "Biography", "Drama"],
     cast: [
       {
         "originalName": "James Mangold",
@@ -99,7 +99,7 @@ List<Movie> movies = [
     rating: 9.2,
     criticsReview: 50,
     metascoreRating: 76,
-    genra: ["Action", "Drama"],
+    genra: ["History", "Fantasy"],
     cast: [
       {
         "originalName": "James Mangold",
