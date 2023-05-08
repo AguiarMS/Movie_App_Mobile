@@ -1,10 +1,10 @@
+// Our movie model
 class Movie {
   final int id, year, numOfRatings, criticsReview, metascoreRating;
   final double rating;
   final List<String> genra;
-  final String title, poster, backdrop;
+  final String plot, title, poster, backdrop;
   final List<Map> cast;
-  final String Plot;
 
   Movie({
     required this.poster,
@@ -17,11 +17,12 @@ class Movie {
     required this.metascoreRating,
     required this.rating,
     required this.genra,
+    required this.plot,
     required this.cast,
-    required this.Plot,
   });
 }
 
+// our demo data movie data
 List<Movie> movies = [
   Movie(
     id: 1,
@@ -34,25 +35,25 @@ List<Movie> movies = [
     criticsReview: 50,
     metascoreRating: 76,
     genra: ["Action", "Drama"],
-    Plot: Plot,
+    plot: plotText,
     cast: [
       {
-        "originalName": "James Mangold",
+        "orginalName": "James Mangold",
         "movieName": "Director",
         "image": "assets/images/actor_1.png",
       },
       {
-        "originalName": "Matt Damon",
+        "orginalName": "Matt Damon",
         "movieName": "Carroll",
         "image": "assets/images/actor_2.png",
       },
       {
-        "originalName": "Christian Bele",
+        "orginalName": "Christian Bale",
         "movieName": "Ken Miles",
         "image": "assets/images/actor_3.png",
       },
       {
-        "originalName": "Caitriona Balfe",
+        "orginalName": "Caitriona Balfe",
         "movieName": "Mollie",
         "image": "assets/images/actor_4.png",
       },
@@ -60,34 +61,34 @@ List<Movie> movies = [
   ),
   Movie(
     id: 2,
-    title: "Fast and Furious",
-    year: 2020,
+    title: "Ford v Ferrari ",
+    year: 2019,
     poster: "assets/images/poster_2.jpg",
-    backdrop: "assets/images/backdrop_1.jpg",
+    backdrop: "assets/images/backdrop_2.jpg",
     numOfRatings: 150212,
-    rating: 8.5,
+    rating: 8.2,
     criticsReview: 50,
     metascoreRating: 76,
     genra: ["Action", "Biography", "Drama"],
-    Plot: Plot,
+    plot: plotText,
     cast: [
       {
-        "originalName": "James Mangold",
+        "orginalName": "James Mangold",
         "movieName": "Director",
         "image": "assets/images/actor_1.png",
       },
       {
-        "originalName": "Matt Damon",
+        "orginalName": "Matt Damon",
         "movieName": "Carroll",
         "image": "assets/images/actor_2.png",
       },
       {
-        "originalName": "Christian Bele",
+        "orginalName": "Christian Bale",
         "movieName": "Ken Miles",
         "image": "assets/images/actor_3.png",
       },
       {
-        "originalName": "Caitriona Balfe",
+        "orginalName": "Caitriona Balfe",
         "movieName": "Mollie",
         "image": "assets/images/actor_4.png",
       },
@@ -95,34 +96,34 @@ List<Movie> movies = [
   ),
   Movie(
     id: 1,
-    title: "Onwards",
+    title: "Onward",
     year: 2020,
     poster: "assets/images/poster_3.jpg",
-    backdrop: "assets/images/backdrop_1.jpg",
+    backdrop: "assets/images/backdrop_3.jpg",
     numOfRatings: 150212,
-    rating: 9.2,
+    rating: 7.6,
     criticsReview: 50,
-    metascoreRating: 76,
-    genra: ["History", "Fantasy"],
-    Plot: Plot,
+    metascoreRating: 79,
+    genra: ["Action", "Drama"],
+    plot: plotText,
     cast: [
       {
-        "originalName": "James Mangold",
+        "orginalName": "James Mangold",
         "movieName": "Director",
         "image": "assets/images/actor_1.png",
       },
       {
-        "originalName": "Matt Damon",
+        "orginalName": "Matt Damon",
         "movieName": "Carroll",
         "image": "assets/images/actor_2.png",
       },
       {
-        "originalName": "Christian Bele",
+        "orginalName": "Christian Bale",
         "movieName": "Ken Miles",
         "image": "assets/images/actor_3.png",
       },
       {
-        "originalName": "Caitriona Balfe",
+        "orginalName": "Caitriona Balfe",
         "movieName": "Mollie",
         "image": "assets/images/actor_4.png",
       },
@@ -130,5 +131,5 @@ List<Movie> movies = [
   ),
 ];
 
-const String Plot =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+String plotText =
+    "American car designer Carroll Shelby and driver Kn Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order.";

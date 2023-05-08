@@ -14,7 +14,7 @@ class Genres extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
+      padding: const EdgeInsets.symmetric(vertical: 2),
       child: SizedBox(
         height: 36,
         child: ListView.builder(
