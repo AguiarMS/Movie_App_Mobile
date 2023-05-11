@@ -10,37 +10,68 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Colors.black26),
+      ),
       drawer: Drawer(
+        elevation: 5,
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
             const UserAccountsDrawerHeader(
-              accountEmail: Text("user@mail.com"),
-              accountName: Text("Seu zé"),
+              decoration: BoxDecoration(
+                color: Colors.red,
+                image: DecorationImage(
+                  image: AssetImage('assets/images/popcorn.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              accountEmail: Text(
+                "user@mail.com",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              accountName: Text(
+                "Nome do Usuário",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
               currentAccountPicture: CircleAvatar(
                 child: Text("SZ"),
               ),
             ),
             ListTile(
-              leading: Icon(Icons.person),
-              title: Text("Minha conta"),
+              leading: const Icon(Icons.person),
+              title: const Text(
+                "Minha conta",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 //Navegar para outra página
               },
             ),
             ListTile(
-              leading: Icon(Icons.shopping_basket),
-              title: Text("Meus pedidos"),
+              leading: const Icon(Icons.favorite),
+              title: const Text(
+                "Filmes Favoritos",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 //Navegar para outra página
               },
             ),
             ListTile(
-              leading: Icon(Icons.favorite),
-              title: Text("Favoritos"),
+              leading: const Icon(Icons.settings),
+              title: const Text(
+                "Configurações",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 //Navegar para outra página
