@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:move_app/constantes.dart';
+import 'package:move_app/models/movie.dart';
+import 'package:move_app/screens/account/components/body.dart';
 import 'package:move_app/screens/home/components/body.dart';
+//import 'package:move_app/screens/account/components/body.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,11 +14,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.white,
         iconTheme: IconThemeData(color: Colors.black26),
       ),
+      //Drawer
       drawer: Drawer(
-        elevation: 5,
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
@@ -51,7 +55,12 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BodyAccount(),
+                  ),
+                );
                 //Navegar para outra página
               },
             ),
